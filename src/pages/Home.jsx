@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Home = () => {
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: ""
+  })
+
   return (
     <div className='min-h-screen bg-[#004b43]'>
       <h1 className='text-center'>Crud App</h1>
@@ -8,7 +13,7 @@ const Home = () => {
           <form action="">
             <div className='flex flex-col'>
               <label htmlFor="name">Name</label>
-              <input type="text" />
+              <input type="text" name='name' />
             </div>
             <div className='flex flex-col'>
               <label htmlFor="">Email</label>
